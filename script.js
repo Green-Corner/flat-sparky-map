@@ -1,6 +1,65 @@
 import { locations, typeColorMap } from "./locations.js";
 
-function initMap() {
+function createThumbnailPlaceholder() {
+  const placeholder = document.createElement("div");
+  placeholder.className = "location-card__thumbnail-placeholder";
+  placeholder.textContent = "Photo coming soon";
+  return placeholder;
+}
+
+function createInfoWindowContent(location) {
+  const content = document.createElement("article");
+  content.className = "location-card";
+
+  const media = document.createElement("div");
+  media.className = "location-card__media";
+
+  if (location.thumbnail) {
+    const thumbnail = document.createElement("img");
+    thumbnail.className = "location-card__thumbnail";
+    thumbnail.src = location.thumbnail;
+    thumbnail.alt = location.thumbnailAlt || `Flat Sparky at ${location.name}`;
+    thumbnail.loading = "lazy";
+    thumbnail.addEventListener("error", () => {
+      media.replaceChildren(createThumbnailPlaceholder());
+    });
+    media.append(thumbnail);
+  } else {
+    media.append(createThumbnailPlaceholder());
+  }
+  content.append(media);
+
+  const title = document.createElement("h3");
+  title.className = "location-card__title";
+  title.textContent = location.name;
+  content.append(title);
+
+  const submitter = document.createElement("p");
+  submitter.className = "location-card__submitter";
+  submitter.textContent = `Photo submitted by ${location.submittedBy || "Anonymous"}`;
+  content.append(submitter);
+
+  if (location.moreinfo) {
+    const description = document.createElement("p");
+    description.className = "location-card__description";
+    description.textContent = location.moreinfo;
+    content.append(description);
+  }
+
+  if (location.url) {
+    const link = document.createElement("a");
+    link.className = "location-card__link";
+    link.href = location.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "View photo";
+    content.append(link);
+  }
+
+  return content;
+}
+
+export function initMap() {
   const center = { lat: 28.0339, lng: 1.6596 };
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 3,
@@ -45,43 +104,8 @@ function initMap() {
       title: loc.name,
     });
 
-    // const infoWindow = new google.maps.InfoWindow({
-    //   content: `
-    //     <div style="max-width: 250px;">
-    //       <strong style="color:#8C1D40;">${loc.name}</strong><br />
-    //       <span>${loc.moreinfo}</span><br />
-    //       <span>${loc.bucket}</span><br />
-    //       <a href="${loc.url}" target="_blank" style="color:#8C1D40;text-decoration:underline;">
-    //         Learn more
-    //       </a>
-    //     </div>
-    //   `,
-    // });
-
     const infoWindow = new google.maps.InfoWindow({
-      content: (() => {
-        if (loc.bucket === "connection") {
-          return `
-            <div style="max-width: 250px;">
-              <h3 style="color:#8C1D40;">${loc.name}</h3>
-              <p>The ${loc.name} is a friendly, on-the-ground ASU alumni contact dedicated to building community and fostering meaningful connections among fellow Sun Devils.</p>
-              <a href="${loc.url}" target="_blank" style="color:#8C1D40;text-decoration:underline;">
-                Learn more
-              </a>
-            </div>
-          `;
-        } else {
-          return `
-            <div style="max-width: 250px;">
-              <strong style="color:#8C1D40;">${loc.name}</strong><br />
-              <p>The ${loc.name} unites ASU alumni through social gatherings, networking and community service projects, strengthening ties to each other and the university.</p>
-              <a href="${loc.url}" target="_blank" style="color:#8C1D40;text-decoration:underline;">
-                Learn more
-              </a>
-            </div>
-          `;
-        }
-      })(),
+      content: createInfoWindowContent(loc),
     });
 
     marker.addListener("click", () => {
@@ -89,5 +113,3 @@ function initMap() {
     });
   });
 }
-
-window.initMap = initMap;

@@ -1,70 +1,42 @@
-# 🌍 ASU Alumni Map
+# Flat Sparky Map
 
-A dynamic, interactive map for the [Arizona State University Alumni Association](https://alumni.asu.edu/chapters), showcasing chapters, clubs, and international connections all around the world. This project uses the **Google Maps JavaScript API** to render live map pins for each alumni group.
+An interactive map showing the places Flat Sparky has visited around the world.
 
-## 🗺️ Live Map Features
+Each pin represents a location where someone photographed Flat Sparky. Selecting a pin shows the name of the person who submitted the image and information about the visit.
 
-- Interactive Google Map display
-- Custom pin colors based on group type:
-  - **Chapters** — Maroon (`#8C1D40`)
-  - **Clubs** — Blue (`#00A3E0`)
-  - **Connections** — Green (`#78BE20`)
-- Clickable pins open info windows with:
-  - Group name
-  - Description
-  - Direct link to the alumni page
+## Run Locally
 
-## 🎨 ASU Brand Compliance
+This project uses the Google Maps JavaScript API and must be served through a local web server.
 
-This project follows [ASU Brand Standards](https://brandguide.asu.edu/brand-elements/design/color), particularly the official university color palette. Each map pin color reflects these brand colors to ensure visual consistency with the ASU identity.
+1. Add an authorized Google Maps API key in `index.html`.
+2. Start a local server from the project directory.
+3. Open the local server URL in a browser.
 
-## 📦 Tech Stack
+For example, with the VS Code Live Server extension, open `index.html` and select **Open with Live Server**.
 
-- **JavaScript (ES Modules)**
-- **Google Maps JavaScript API**
-- **HTML5/CSS3**
+## Project Files
 
-## 📁 Project Structure
+- `index.html` loads the map.
+- `script.js` creates the map, pins, and information windows.
+- `locations.js` contains the location data.
+- `style.css` controls the map layout and appearance.
 
-📦 alumni-map/
-├── index.html # Main HTML file
-├── script.js # Initializes the map & markers
-├── locations.js # JSON-like list of all alumni group data
-├── styles.css # Optional CSS styles
-└── README.md # You're reading it!
+## Location Data
 
-## 🚀 Getting Started
+Each entry in `locations.js` can include a submitter and thumbnail:
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/alumni-map.git
-cd alumni-map
-
-2. Add Your Google Maps API Key
-Replace YOUR_API_KEY in index.html:
-
-html
-Copy
-Edit
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
-You can get your API key from Google Maps Console.
-
-3. Run Locally
-You’ll need a local server due to module imports. Run with:
-
-bash
-Copy
-Edit
-npx serve .
-# or
-python -m http.server
-Then open http://localhost:5000 or similar in your browser.
-
-📌 Contribution
-PRs welcome! If you’d like to add or edit alumni groups or features, just:
-
-Update locations.js with new entries.
-
-Open an issue for improvements.
+```js
+{
+  name: "Tempe, Arizona",
+  lat: 33.4255,
+  lng: -111.94,
+  submittedBy: "Taylor Smith",
+  thumbnail: "images/tempe.jpg",
+  thumbnailAlt: "Flat Sparky in Tempe, Arizona",
+  moreinfo: "Flat Sparky visiting the ASU Tempe campus.",
+  url: "https://example.com/full-size-photo",
+  bucket: "club",
+}
 ```
+
+`thumbnail` may be a local image path or a full image URL. Leave it empty when no image is available; the popup will show a placeholder until a photo is added. `submittedBy` falls back to "Anonymous" when it is empty.
