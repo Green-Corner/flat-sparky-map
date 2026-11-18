@@ -4,8 +4,10 @@ export const locations = [
     lat: 48.86289,
     lng: 2.32931,
     submittedBy: "Stacy Bertinelli",
-    thumbnail: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-OlympicFlame.jpg",
-    thumbnailAlt: "Flat Sparky at the Paris 2024 Olympic Cauldron in the Tuileries Garden",
+    thumbnail:
+      "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-OlympicFlame.jpg",
+    thumbnailAlt:
+      "Flat Sparky at the Paris 2024 Olympic Cauldron in the Tuileries Garden",
     url: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-OlympicFlame.jpg",
     moreinfo:
       "Flat Sparky celebrates the OG inspiring game changer, Sun Devil Swimming superstar and Olympic gold medalist Leon Marchand, at the Paris 2024 Olympic Cauldron at the Tuileries Garden. #asuflatsparky #asuchangingfutures",
@@ -16,7 +18,8 @@ export const locations = [
     lat: 48.855278,
     lng: 2.315833,
     submittedBy: "Stacy Bertinelli",
-    thumbnail: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-Thinker.jpg",
+    thumbnail:
+      "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-Thinker.jpg",
     thumbnailAlt: "Flat Sparky with The Thinker at the Rodin Museum in Paris",
     url: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-Thinker.jpg",
     moreinfo:
@@ -28,7 +31,8 @@ export const locations = [
     lat: 48.858222,
     lng: 2.2945,
     submittedBy: "Stacy Bertinelli",
-    thumbnail: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-Eiffel.jpg",
+    thumbnail:
+      "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-Eiffel.jpg",
     thumbnailAlt: "Flat Sparky at the Eiffel Tower in Paris",
     url: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-Eiffel.jpg",
     moreinfo:
@@ -40,8 +44,10 @@ export const locations = [
     lat: -33.85681,
     lng: 151.21514,
     submittedBy: "Stacy Bertinelli",
-    thumbnail: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-SOH-Int.jpg",
-    thumbnailAlt: "Flat Sparky inside the Joan Sutherland Theatre at the Sydney Opera House",
+    thumbnail:
+      "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-SOH-Int.jpg",
+    thumbnailAlt:
+      "Flat Sparky inside the Joan Sutherland Theatre at the Sydney Opera House",
     url: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-SOH-Int.jpg",
     moreinfo:
       "Flat Sparky transformed global education by traveling to Australia with the W. P. Carey School of Business global immersion program. While Down Under, he got some culture at the world-famous Sydney Opera House.",
@@ -52,8 +58,10 @@ export const locations = [
     lat: -33.858,
     lng: 151.2101,
     submittedBy: "Stacy Bertinelli",
-    thumbnail: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-SOH-Rec.jpg",
-    thumbnailAlt: "Flat Sparky at Sydney Harbor at night with the Sydney Opera House in the background",
+    thumbnail:
+      "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-SOH-Rec.jpg",
+    thumbnailAlt:
+      "Flat Sparky at Sydney Harbor at night with the Sydney Opera House in the background",
     url: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-SOH-Rec.jpg",
     moreinfo:
       "Aussie! Aussie! Aussie! Oi! Oi! Oi! Flat Sparky visited beautiful Sydney Harbor at night during his global immersion trip to Australia with the W. P. Carey School of Business.",
@@ -64,11 +72,24 @@ export const locations = [
     lat: 48.8601,
     lng: 2.3354,
     submittedBy: "Stacy Bertinelli",
-    thumbnail: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-Mona-Lisa.jpg",
+    thumbnail:
+      "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-Mona-Lisa.jpg",
     thumbnailAlt: "Flat Sparky with the Mona Lisa at the Louvre in Paris",
     url: "https://asuchangingfutures.org/wp-content/uploads/2026/09/FS-Mona-Lisa.jpg",
     moreinfo:
       "Flat Sparky thinks the Mona Lisa would look much better throwing the pitchfork during his visit to the Louvre in Paris.",
+    bucket: "club",
+  },
+  {
+    name: "UCF vs. ASU",
+    lat: 28.538336,
+    lng: -81.379234,
+    submittedBy: "Alicia Zink",
+    thumbnail:
+      "https://asuchangingfutures.org/wp-content/uploads/2026/11/ucfvsasu-orlando.jpg",
+    thumbnailAlt: "Cheering on our Sun Devils at the UCF v. ASU in Orlando",
+    url: "https://asuchangingfutures.org/wp-content/uploads/2026/11/ucfvsasu-orlando.jpg",
+    moreinfo: "Cheering on our Sun Devils at the UCF v. ASU in Orlando",
     bucket: "club",
   },
 ];
