@@ -81,15 +81,17 @@ export const locations = [
     bucket: "club",
   },
   {
-    name: "UCF vs. ASU",
+    name: "ASU vs. UCF",
     lat: 28.538336,
     lng: -81.379234,
     submittedBy: "Alicia Zink",
     thumbnail:
       "https://asuchangingfutures.org/wp-content/uploads/2026/11/ucfvsasu-orlando.jpg",
-    thumbnailAlt: "Cheering on our Sun Devils at the UCF v. ASU in Orlando",
+    thumbnailAlt:
+      "Cheering on our Sun Devils at the ASU vs. UCF football game in Orlando.",
     url: "https://asuchangingfutures.org/wp-content/uploads/2026/11/ucfvsasu-orlando.jpg",
-    moreinfo: "Cheering on our Sun Devils at the UCF v. ASU in Orlando",
+    moreinfo:
+      "Cheering on our Sun Devils at the ASU vs. UCF football game in Orlando.",
     bucket: "club",
   },
 ];
