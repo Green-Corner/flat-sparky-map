@@ -94,6 +94,20 @@ export const locations = [
       "Cheering on our Sun Devils at the ASU at UCF football game in Orlando.",
     bucket: "club",
   },
+  {
+    name: "ASU at UCF",
+    lat: 40.639928,
+    lng: -73.778692,
+    submittedBy: "Rhyatt Mazzo",
+    thumbnail:
+      "https://asuchangingfutures.org/wp-content/uploads/2026/11/RhyattMazzo.jpg",
+    thumbnailAlt:
+      "Getting ready to fly out to PHX for ASU Homecoming and the 100th Territorial Cup!",
+    url: "https://asuchangingfutures.org/wp-content/uploads/2026/11/RhyattMazzo.jpg",
+    moreinfo:
+      "Getting ready to fly out to PHX for ASU Homecoming and the 100th Territorial Cup!",
+    bucket: "club",
+  },
 ];
 
 export const typeColorMap = {
