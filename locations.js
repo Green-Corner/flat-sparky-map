@@ -95,7 +95,7 @@ export const locations = [
     bucket: "club",
   },
   {
-    name: "ASU at UCF",
+    name: "Homecoming Bound",
     lat: 40.639928,
     lng: -73.778692,
     submittedBy: "Rhyatt Mazzo",
