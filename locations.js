@@ -108,6 +108,20 @@ export const locations = [
       "Getting ready to fly out to PHX for ASU Homecoming and the 100th Territorial Cup!",
     bucket: "club",
   },
+  {
+    name: "Sparky Explores New Zealand",
+    lat: -45.031162,
+    lng: 168.662643,
+    submittedBy: "Jenna Ervin",
+    thumbnail:
+      "https://asuchangingfutures.org/wp-content/uploads/2026/11/sparkyNewZealand.jpg",
+    thumbnailAlt:
+      "Sparky and I on a walk exploring the beautiful scenery of New Zealand!",
+    url: "https://asuchangingfutures.org/wp-content/uploads/2026/11/sparkyNewZealand.jpg",
+    moreinfo:
+      "Sparky and I on a walk exploring the beautiful scenery of New Zealand!",
+    bucket: "club",
+  },
 ];
 
 export const typeColorMap = {
